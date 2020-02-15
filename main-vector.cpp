@@ -49,7 +49,7 @@ int userAmountInput();
 char isHwAmountInput();
 int hwAmountInput(char isHwAmount);
 std::vector<int> hwInput(char isHwAmount, int hwAmount);
-int hwElementInput(int iterator, char isUndefined);
+int hwElementInput(int iterator, char isHwAmount);
 int examInput();
 std::vector<Student> inputStudents(int users);
 std::string finalScoreTypeInput();
@@ -177,7 +177,7 @@ std::vector<int> hwInput(char isHwAmount, int hwAmount) {
     return hw;
 }
 
-int hwElementInput(int iterator, char isUndefined) {
+int hwElementInput(int iterator, char isHwAmount) {
     int elem;
 
     bool invalid = false;
@@ -190,7 +190,7 @@ int hwElementInput(int iterator, char isUndefined) {
                          "skaičiumi nuo 1 iki 10"
                       << std::endl;
         }
-        if (isUndefined)
+        if (isHwAmount == 'n')
             std::cout << "Jei įvedėte visus rezultatus, rašykite '" << STOP
                       << "'. ";
         std::cout
@@ -200,7 +200,7 @@ int hwElementInput(int iterator, char isUndefined) {
         std::cout << ">> ";
         std::cin >> hwInput;
 
-        if (iterator >= 0) {
+        if (isHwAmount == 'n') {
             if (hwInput == STOP) {
                 elem = -1;
                 return elem;
