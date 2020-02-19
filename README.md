@@ -10,5 +10,5 @@ In order to use this application, you have to have a G++ compiler. If so, in com
 <br /> And now you can use this application.
 
 ## Versions
-
+<br /> [v0.2](https://github.com/pablozz/vu-oop-2/releases/tag/v0.2)
 <br />[v0.1](https://github.com/pablozz/vu-oop-2/releases/tag/v0.1)
