@@ -7,7 +7,10 @@
 
 struct App {
    public:
-    void run() { printResults(getStudents()); }
+    void run() {
+        std::vector<Student> students = getStudents();
+        printResults(students);
+    }
 
    private:
     const std::string RANDOM = "random";
@@ -64,7 +67,8 @@ struct App {
 
     std::string fileNameInput() {
         std::string input;
-        std::cout << "Įveskite failo pavadinimą (pvz. failas.txt). Jei norite "
+        std::cout << "Įveskite failo pavadinimą (pvz. failas.txt). Failas turi "
+                     "būti 'info' kataloge. Jei norite "
                      "informaciją įvesti rankiniu būdu, rašykite 'n'.\n>> ";
         std::cin >> input;
         return input;
@@ -73,7 +77,7 @@ struct App {
     std::vector<Student> getStudentsFromFile(std::string fileName) {
         std::vector<Student> students;
         std::ifstream file;
-        file.open(fileName);
+        file.open("./info/" + fileName);
         if (!file) {
             return students;
         } else {

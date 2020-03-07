@@ -22,6 +22,10 @@ struct Student {
 
     std::string getSName() { return sname; }
 
+    std::vector<int> getHw() { return hw; }
+
+    int getExam() { return exam; }
+
     double getAverage() {
         int sum = 0;
         for (int i = 0; i < hw.size(); i++) sum += hw[i];
