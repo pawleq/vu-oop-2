@@ -1,0 +1,4 @@
+Vardas        Pavardė        ND1            ND2            ND3            ND4            Egz.
+Pavardė4      Vardas4        2              4              10             6              10
+Pavardė5      Vardas5        1              9              8              3              6
+Pavardė6      Vardas6        4              1              7              10             10
